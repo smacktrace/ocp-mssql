@@ -6,8 +6,8 @@ FROM mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
 
 ADD get-pip.py /tmp/get-pip.py
 
-RUN apt-get -y update && 
-        apt-get install apt-file &&
+RUN apt-get -y update && \ 
+        apt-get install apt-file && \
         apt-file update
 
 RUN apt-get -y install vim
