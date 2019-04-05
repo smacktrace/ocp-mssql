@@ -8,5 +8,7 @@ ADD get-pip.py /tmp/get-pip.py
 
 RUN python /tmp/get-pip.py
 
+RUN pip install opencensus
+
 RUN useradd -r -u 1002 appuser
 USER appuser
