@@ -4,7 +4,9 @@
 
 FROM mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
 
-RUN apt-get install -y pip
+ADD get-pip.py /tmp/get-pip.py
+
+RUN python get-pip.py
 
 RUN useradd -r -u 1002 appuser
 USER appuser
